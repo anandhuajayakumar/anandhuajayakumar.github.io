@@ -1,0 +1,19 @@
+<script>
+  window.wxOConfiguration = {
+    clientVersion: "latest",
+    orchestrationID: "20250127-1254-4611-9088-4ae360065720_20250127-1306-5264-2005-c34fdaf83d92",
+    hostURL: "https://preprod.dl.watson-orchestrate.ibm.com",
+    rootElementID: "root",
+    showLauncher: true, // set to false to render the chat window directly
+    // token: "<CLIENT_JWT_GOES_HERE>",
+    
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/webclient/wxoLoader.js`;
+    script.addEventListener('load', function () {
+      wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, );
+</script>
